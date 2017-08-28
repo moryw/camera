@@ -41,6 +41,8 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  height: 85px;
+  z-index: 1;
 }
 
 header .content {
@@ -127,6 +129,9 @@ header .mobile {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  position: relative;
+  top: 170px;
+  left: 100px;
 }
 
 #sign-up-cta .content {
@@ -220,16 +225,16 @@ header .mobile {
 }
 
 .feature {
-  flex: 1;
-  padding: 2rem;
-  margin: 0px 1.25rem;
   background-color: white;
+  padding: 32px;
+  margin: 0 18px;
+  text-align: center;
 }
 
-.feature .image-container {
+.feature img {
   width: 90%;
   height: 65%;
-  margin: 0 auto;
+  margin: auto;
 }
 
 .feature h2 {
@@ -244,6 +249,11 @@ header .mobile {
   line-height: 1.2;
   font-weight: 300;
   color: #4a4a4a;
+}
+
+.feature .content {
+  height: 155px;
+  padding-top: 2.5rem;
 }
 
 @media only screen and (max-width: 890px) {
@@ -299,6 +309,16 @@ header .mobile {
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  display: flex;
+  justify-content: center;
+}
+
+#filters-section .image-container {
+  overflow: visible;
+}
+
+#filters-section img {
+  width: 100%;
 }
 
 @media only screen and (max-width: 760px) {
@@ -337,11 +357,15 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
@@ -350,12 +374,12 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
@@ -364,7 +388,7 @@ header .mobile {
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
